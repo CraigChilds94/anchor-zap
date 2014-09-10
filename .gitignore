@@ -1,0 +1,5 @@
+# Ignore some other files that we
+# dont like polluting the repo
+.DS_Store
+.sass-cache
+node_modules

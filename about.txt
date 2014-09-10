@@ -1,5 +1,5 @@
-Theme name:    Default
-Description:   This is the default, shiny theme for Anchor CMS.
-Author name:   Visual Idiot
-Author site:   http://visualidiot.com
+Theme name:    Zap
+Description:   This is a theme brought to you by Craig Childs
+Author name:   Craig Childs
+Author site:   http://craigchilds.me
 License:       http://licence.visualidiot.com

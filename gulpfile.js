@@ -29,9 +29,9 @@ var assets = {
 
 // Configure the paths to the public assets
 var public = {
-    styles: 'css',
-    js:     'js',
-    img:    'img'
+    styles: 'public/css',
+    js:     'public/js',
+    img:    'public/img'
 }
 
 // Create a js task

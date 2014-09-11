@@ -41,6 +41,6 @@
 			<header class="header">
 				<div class="header__wrapper">
 					<a class="header__logo" href="<?php echo base_url(); ?>"><?php echo site_name(); ?></a>
-					<?php zap_grab_partial('navigation'); ?>
+					<?php theme_include('partials/navigation'); ?>
 				</div>
 			</header>

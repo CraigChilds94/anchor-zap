@@ -1,5 +1,32 @@
 .content {
+    width: 100%;
+    padding:($padding * 4) 0;
+
     &__wrap {
         @extend %wrapper;
+    }
+
+    p {
+        @include center(80%);
+        text-align: center;
+    }
+
+    &--grey {
+        @extend .content;
+        background: #eee;
+    }
+
+    &--primary {
+        @extend .content;
+        background: $primary-color;
+
+        p {
+            color: #eee;
+        }
+    }
+
+    &--secondary {
+        @extend .content;
+        background: $secondary-color;
     }
 }

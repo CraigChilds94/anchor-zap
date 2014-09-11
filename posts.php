@@ -1,8 +1,18 @@
 <?php theme_include('header'); ?>
 
-<section class="content">
+<section class="content--grey">
 	<div class="content__wrap">
-		<?php echo page_content(); ?>
+		<p><?php echo page_content(); ?></p>
+	</div>
+</section>
+<section class="content--primary">
+	<div class="content__wrap">
+		<p><?php echo page_content(); ?></p>
+	</div>
+</section>
+<section class="content--secondary">
+	<div class="content__wrap">
+		<p><?php echo page_content(); ?></p>
 	</div>
 </section>
 

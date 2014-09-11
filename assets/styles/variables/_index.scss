@@ -2,11 +2,6 @@
  * This file includes our variables
  */
 
-// Colors
-$primary-color: #2E313D;
-$secondary-color: #B7C11E;
-$nav-color: #fff;
-
-// Box-Model stuff
-$padding: 20px;
-$margin: 20px;
+@import 'colors';
+@import 'misc';
+@import 'typography';

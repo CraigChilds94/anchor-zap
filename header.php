@@ -5,7 +5,7 @@
 		<title><?php echo page_title('Page can’t be found'); ?> - <?php echo site_name(); ?></title>
 
 		<meta name="description" content="<?php echo site_description(); ?>">
-		<link rel="stylesheet" href="<?php echo theme_url('/css/style.css'); ?>">
+		<link rel="stylesheet" href="<?php echo theme_url('/css/main.css'); ?>">
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
 		<link rel="shortcut icon" href="<?php echo theme_url('img/favicon.png'); ?>">
@@ -37,47 +37,10 @@
 		<?php endif; ?>
 	</head>
 	<body class="<?php echo body_class(); ?>">
-		<div class="main-wrap">
-			<div class="slidey" id="tray">
-				<div class="wrap">
-					<form id="search" action="<?php echo search_url(); ?>" method="post">
-						<label for="term">Search my blog:</label>
-						<input type="search" id="term" name="term" placeholder="To search, type and hit enter&hellip;" value="<?php echo search_term(); ?>">
-					</form>
-
-					<aside>
-						<b>Categories</b>
-						<ul>
-						<?php while(categories()): ?>
-							<li>
-								<a href="<?php echo category_url(); ?>" title="<?php echo category_description(); ?>">
-									<?php echo category_title(); ?> <span><?php echo category_count(); ?></span>
-								</a>
-							</li>
-						<?php endwhile; ?>
-						</ul>
-					</aside>
+		<div class="main">
+			<header class="header">
+				<div class="header__wrapper">
+					<a class="header__logo" href="<?php echo base_url(); ?>"><?php echo site_name(); ?></a>
+					<?php zap_grab_partial('navigation'); ?>
 				</div>
-			</div>
-
-			<header id="top">
-				<a id="logo" href="<?php echo base_url(); ?>"><?php echo site_name(); ?></a>
-
-				<?php if(has_menu_items()): ?>
-				<nav id="main" role="navigation">
-					<ul>
-						<?php while(menu_items()): ?>
-						<li <?php echo (menu_active() ? 'class="active"' : ''); ?>>
-							<a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>">
-								<?php echo menu_name(); ?>
-							</a>
-						</li>
-						<?php endwhile; ?>
-
-						<li class="tray">
-							<a href="#tray" class="linky"><img src="<?php echo theme_url('img/categories.png'); ?>" alt="Categories" title="View my posts by category"></a>
-						</li>
-					</ul>
-				</nav>
-				<?php endif; ?>
 			</header>

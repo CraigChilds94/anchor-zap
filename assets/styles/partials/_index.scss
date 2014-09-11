@@ -4,3 +4,9 @@
 
 // Include the reset file
 @import 'reset';
+
+// Include the rest of our partials
+@import 'header';
+@import 'navigation';
+@import 'content';
+@import 'footer';

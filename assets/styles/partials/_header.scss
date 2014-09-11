@@ -1,0 +1,21 @@
+/**
+ * The styles for the header
+ */
+.header {
+    width: 100%;
+    height: 100px;
+    background: $primary-color;
+    border-bottom: 1px solid darken($primary-color, 30%);
+
+    &__wrapper {
+        @extend %wrapper;
+    }
+
+    &__logo {
+        @extend %h1;
+        @include col(4/9);
+        line-height: 100px !important;
+        font-weight: lighter;
+        color: $secondary-color;
+    }
+}

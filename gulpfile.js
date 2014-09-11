@@ -49,7 +49,6 @@ gulp.task('css', function() {
 		.pipe(sass({ style: 'expanded' }))
 		.pipe(autoprefixer())
 		.pipe(minifycss())
-        .pipe(rename('style.css'))
 		.pipe(gulp.dest(public.styles))
 		//.pipe(notify({ message : 'CSS task has completed.' }))
 });

@@ -73,10 +73,14 @@ function total_articles() {
  * @param  {String} $path 			  Where are we looking for this partial?
  */
 function zap_grab_partial($name, $path = 'partials/') {
-	$full = $path . $name;
+	// Make the path relative
+	$full = './' . theme_url() . $path . $name . '.php';
+
+	// Lets see if the partial exists
 	if(file_exists($full)) {
 		include_once($full);
 	} else {
+		// Oh it doesn't? throw a tantrum
 		$error = 'Unable to include partial: ' . $name . ', file does not exist at: ' . $full;
 		throw new Exception($error);
 	}

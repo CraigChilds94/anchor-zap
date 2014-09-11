@@ -1,0 +1,23 @@
+/**
+ * Here lie the styles for the navigation of the site
+ */
+.navigation {
+    @include col(5/9);
+
+    ul {
+        float: right;
+        li {
+            line-height: 100px !important;
+            float: left;
+            margin-left: $padding;
+        }
+    }
+
+    &__link {
+        color: $nav-color;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}

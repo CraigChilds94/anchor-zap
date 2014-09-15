@@ -1,9 +1,15 @@
 <?php theme_include('header'); ?>
 
-		<section class="content wrap">
-			<h1><?php echo page_title(); ?></h1>
+<section class="content--grey">
+	<div class="content__wrap">
+		<h1 class="page__title"><?php echo page_title(); ?></h1>
+	</div>
+</section>
 
-			<?php echo page_content(); ?>
-		</section>
+<section class="content--primary">
+	<div class="content__wrap">
+		<div class="page__content"><?php echo page_content(); ?></div>
+	</div>
+</section>
 
 <?php theme_include('footer'); ?>

@@ -1,0 +1,21 @@
+$article-line-height: 50px;
+.article {
+    @include center(50%);
+    text-align: center;
+    opacity: 0.7;
+    transition: opacity .3s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &__date {
+        float: left;
+        line-height: $article-line-height;
+    }
+
+    &__title {
+        float: right;
+        line-height: $article-line-height;
+    }
+}

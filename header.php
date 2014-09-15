@@ -5,6 +5,7 @@
 		<title><?php echo page_title('Page can’t be found'); ?> - <?php echo site_name(); ?></title>
 
 		<meta name="description" content="<?php echo site_description(); ?>">
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo theme_url('/public/css/main.css'); ?>">
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
@@ -40,7 +41,13 @@
 		<div class="main">
 			<header class="header">
 				<div class="header__wrapper">
-					<a class="header__logo" href="<?php echo base_url(); ?>"><?php echo site_name(); ?></a>
+					<a class="header__logo" href="<?php echo base_url(); ?>">
+						<?php if(theme_option('header_logo')) : ?>
+							<img src="<?php echo theme_option('logo_src'); ?>">
+						<?php else : ?>
+							<?php echo site_name(); ?>
+						<?php endif; ?>
+					</a>
 					<?php theme_include('partials/navigation'); ?>
 				</div>
 			</header>

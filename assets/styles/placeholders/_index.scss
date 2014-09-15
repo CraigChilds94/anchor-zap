@@ -2,7 +2,12 @@
  * This file includes all of our placeholders
  */
 %wrapper {
-    @include center(900px);
+    @include center(90%);
+
+    @include mt(920px) {
+        @include center(900px);
+    }
+
 }
 
 %h1 {

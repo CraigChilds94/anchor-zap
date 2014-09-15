@@ -1,0 +1,70 @@
+//
+// Primary breakpoints
+// ===================
+// Define the projects breakpoints here. Some sensible defualts are included.
+//
+
+/**
+ * Less than
+ * =========
+ *
+ * @param $point - The value you're using in the breakpoint
+ */
+@mixin less-than($point) {
+    @media (max-width: $point) {
+        @content;
+    }
+}
+
+/**
+ * More than
+ * =========
+ *
+ * @param $point - The value you're using in the break point
+ */
+@mixin more-than($point) {
+    @media (min-width: $point) {
+        @content;
+    }
+}
+
+/**
+ * Between two values
+ * ==================
+ *
+ * @param $min - The minimum value
+ * @param $max - The maximum value
+ */
+@mixin between($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+
+/**
+ * Aliases below here
+ * ==================
+ */
+
+
+// less-than() alias
+@mixin lt($args...) {
+    @include less-than($args) {
+        @content;
+    }
+}
+
+// more-than() alias
+@mixin mt($args...) {
+    @include more-than($args) {
+        @content;
+    }
+}
+
+// between() alias
+@mixin bt($min, $max, $args...) {
+    @include between($min, $max, $args...) {
+        @content;
+    }
+}

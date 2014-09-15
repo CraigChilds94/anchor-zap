@@ -7,7 +7,7 @@
     }
 
     p {
-        @include center(80%);
+        @include center(100%);
         text-align: center;
     }
 
@@ -28,5 +28,100 @@
     &--secondary {
         @extend .content;
         background: $secondary-color;
+
+        p {
+            color: $primary-color;
+        }
+    }
+
+    &__two {
+        @extend .content;
+
+        &__p {
+            @include stack();
+            text-align: center;
+            margin-bottom: $padding * 2;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @include mt(600px) {
+                @include unstack();
+                @include col(1/2);
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+
+        &--grey {
+            @extend .content--grey;
+
+            p {
+                @extend .content__two__p;
+            }
+        }
+
+        &--primary {
+            @extend .content--primary;
+
+            p {
+                @extend .content__two__p;
+            }
+        }
+
+        &--secondary {
+            @extend .content--secondary;
+
+            p {
+                @extend .content__two__p;
+            }
+        }
+    }
+
+
+    &__three {
+        @extend .content;
+
+        &__p {
+            @include stack();
+            text-align: center;
+            margin-bottom: $padding * 2;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @include mt(700px) {
+                @include unstack();
+                @include col(1/3);
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+
+        &--grey {
+            @extend .content--grey;
+
+            p {
+                @extend .content__three__p;
+            }
+        }
+
+        &--primary {
+            @extend .content--primary;
+
+            p {
+                @extend .content__three__p;
+            }
+        }
+
+        &--secondary {
+            @extend .content--secondary;
+
+            p {
+                @extend .content__three__p;
+            }
+        }
     }
 }

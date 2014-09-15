@@ -8,13 +8,24 @@
             </a>
         </li>
         <?php endwhile; ?>
-        <?php if(user_authed()) : ?>
-            <li>
-                <a class="navigation__link" href="/admin" title="Admin">
-                    Admin
-                </a>
-            </li>
+        <?php if(theme_option('show_admin_links')) : ?>
+        <li>
+            <?php if(user_authed()) : ?>
+
+            <a class="navigation__link" href="/admin" title="Admin">
+                Admin
+            </a>
+
+            <?php else : ?>
+
+            <a class="navigation__link" href="/admin/login" title="Login">
+                Login
+            </a>
+
+            <?php endif; ?>
+        </li>
         <?php endif; ?>
     </ul>
+    <a class="navigation__toggle"><i class="fa fa-bars"></i></a>
 </nav>
 <?php endif; ?>

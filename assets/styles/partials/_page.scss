@@ -1,0 +1,19 @@
+.page {
+
+    &__title {
+        @extend %h1;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__content {
+
+        a {
+            color: darken($secondary-color, 10%);
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}

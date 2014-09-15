@@ -2,17 +2,29 @@
 
 <section class="content--grey">
 	<div class="content__wrap">
-		<p><?php echo page_content(); ?></p>
+	<?php if(has_posts()): ?>
+		<?php while(posts()): ?>
+
+			<div class="article">
+				<a href="<?php echo article_url(); ?>">
+					<span>
+						<em class="article__date"><?php echo article_date(); ?></em>
+						<h2 class="article__title"><?php echo article_title(); ?></h2>
+					</span>
+				</a>
+			</div>
+
+		<?php endwhile; ?>
+	<?php else: ?>
+	<p>There are no posts to show at this time, I'm sorry...</p>
+	<?php endif; ?>
 	</div>
 </section>
-<section class="content--primary">
+<section class="content__three--secondary">
 	<div class="content__wrap">
-		<p><?php echo page_content(); ?></p>
-	</div>
-</section>
-<section class="content--secondary">
-	<div class="content__wrap">
-		<p><?php echo page_content(); ?></p>
+		<?php echo page_content(); ?>
+		<?php echo page_content(); ?>
+		<?php echo page_content(); ?>
 	</div>
 </section>
 

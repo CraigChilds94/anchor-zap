@@ -20,11 +20,9 @@
 	<?php endif; ?>
 	</div>
 </section>
-<section class="content__three--secondary">
+<section class="content--secondary">
 	<div class="content__wrap">
-		<?php echo page_content(); ?>
-		<?php echo page_content(); ?>
-		<?php echo page_content(); ?>
+		<p class="article__site-description"><?php echo site_description(); ?></p>
 	</div>
 </section>
 

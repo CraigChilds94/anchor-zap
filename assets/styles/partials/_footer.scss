@@ -2,7 +2,7 @@
     background: lighten($primary-color, 10%);
     text-align: center;
     display: block;
-    padding: $padding 0;
+    padding: $padding * 2 0;
 
     &__wrap {
         @extend %wrapper;

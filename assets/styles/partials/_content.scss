@@ -6,30 +6,45 @@
         @extend %wrapper;
     }
 
-    p {
+    &--title {
+        @extend .content--secondary;
+        padding: $padding * 2 0;
+        h1 {
+            color: #fff;
+            text-shadow: 1px 1px 0 $primary-color;
+        }
+    }
+
+    &__p {
         @include center(100%);
         text-align: center;
     }
 
     &--grey {
         @extend .content;
-        background: #eee;
+        background-color: #eee;
+
+        p {
+            @extend .content__p;
+        }
     }
 
     &--primary {
         @extend .content;
-        background: $primary-color;
+        background-color: $primary-color;
 
         p {
-            color: #eee;
+            @extend .content__p;
+            color: #fff;
         }
     }
 
     &--secondary {
         @extend .content;
-        background: $secondary-color;
+        background-color: $secondary-color;
 
         p {
+            @extend .content__p;
             color: $primary-color;
         }
     }
@@ -124,4 +139,10 @@
             }
         }
     }
+}
+
+.abstract-background {
+    background-image: url('../img/abstract-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
 }

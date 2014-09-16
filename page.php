@@ -1,12 +1,12 @@
 <?php theme_include('header'); ?>
 
-<section class="content--grey">
+<section class="content--title abstract-background">
 	<div class="content__wrap">
 		<h1 class="page__title"><?php echo page_title(); ?></h1>
 	</div>
 </section>
 
-<section class="content--primary">
+<section class="content--grey">
 	<div class="content__wrap">
 		<div class="page__content"><?php echo page_content(); ?></div>
 	</div>
